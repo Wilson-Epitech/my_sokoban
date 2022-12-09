@@ -4,7 +4,7 @@
 ** File description:
 ** task02
 */
-#include "../include/lib.h"
+#include "../../include/lib.h"
 
 int my_putstr(char const *str)
 {
@@ -13,4 +13,5 @@ int my_putstr(char const *str)
         my_putchar(str[i]);
         i = i + 1;
     }
+    return 0;
 }

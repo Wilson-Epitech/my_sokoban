@@ -11,8 +11,20 @@ CFLAGS  =	-Wextra -Wall
 
 LDFLAFS = -lncurses
 
-SRC	=	main.c						\
-		src/lib/my_strlen.c			\
+SRC	=	src/main.c							\
+		src/error_handling.c				\
+		src/keys/keys.c 					\
+		src/keys/key_up.c 					\
+		src/keys/key_down.c 				\
+		src/keys/key_left.c 				\
+		src/keys/key_right.c				\
+		src/init_struct.c					\
+		src/lib/my_strlen.c					\
+		src/lib/my_put_nbr.c				\
+		src/lib/my_putchar.c				\
+		src/lib/my_putstr.c 				\
+		src/lib/my_str_to_word_array.c		\
+#		src/read_map.c 						\
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -26,6 +38,12 @@ $(NAME)	:	$(OBJ)
 clean	:
 	rm -f *~
 	rm -f *.o
+	cd src &&  rm -f *~
+	cd src &&  rm -f *.o
+	cd src/lib &&  rm -f *~
+	cd src/lib &&  rm -f *.o
+	cd src/keys &&  rm -f *~
+	cd src/keys &&  rm -f *.o
 
 fclean	:	clean
 	rm -f $(NAME)
