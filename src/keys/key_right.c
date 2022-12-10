@@ -14,6 +14,7 @@ void key_right(GAME_T *ALL, PLAYER_POS_T *pos)
         ALL->array.array[pos->x][pos->y] = ' ';
         pos->y = pos->y + 1;
         ALL->array.array[pos->x][pos->y] = 'P';
+        printw(" x: %d y : %d\n", pos->x, pos->y);
         return;
     }
     if (ALL->array.array[pos->x][pos->y + 1] == 'X'

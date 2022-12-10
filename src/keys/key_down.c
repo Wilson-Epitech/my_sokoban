@@ -14,6 +14,7 @@ if ((ALL->array.array[pos->x + 1][pos->y] == ' ')
     ALL->array.array[pos->x][pos->y] = ' ';
     pos->x = pos->x + 1;
     ALL->array.array[pos->x][pos->y] = 'P';
+    printw(" x: %d y : %d\n", pos->x, pos->y);
     return;
 }
 if (ALL->array.array[pos->x + 1][pos->y] == 'X'
