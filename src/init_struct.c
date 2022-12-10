@@ -28,6 +28,7 @@ void init_array_struct(GAME_T *ALL, int ac, char **av)
     read(fd, ALL->array.buff, sb.st_size);
     ALL->array.buff[sb.st_size] = '\0';
     ALL->array.array = my_str_to_word_array(ALL->array.buff);
+    ALL->array.array_O = my_str_to_word_array(ALL->array.buff);
 }
 
 void init(GAME_T *ALL, int ac, char **av)

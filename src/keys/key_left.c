@@ -18,7 +18,8 @@ void key_left(GAME_T *ALL, PLAYER_POS_T *pos)
         return;
     }
     if (ALL->array.array[pos->x][pos->y - 1] == 'X'
-    && ALL->array.array[pos->x][pos->y - 2] != '#') {
+    && ALL->array.array[pos->x][pos->y - 2] != '#'
+    && ALL->array.array[pos->x][pos->y - 2] != 'X' ) {
         ALL->array.array[pos->x][pos->y] = ' ';
         ALL->array.array[pos->x][pos->y - 1] = 'P';
         ALL->array.array[pos->x][pos->y - 2] = 'X';

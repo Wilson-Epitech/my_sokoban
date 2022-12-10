@@ -30,5 +30,7 @@ void key_up(GAME_T *ALL, PLAYER_POS_T *pos);
 void key_down(GAME_T *ALL, PLAYER_POS_T *pos);
 void key_left(GAME_T *ALL, PLAYER_POS_T *pos);
 void key_right(GAME_T *ALL, PLAYER_POS_T *pos);
-int error_handling(int ac, char **av);
+int error_loop(GAME_T *ALL);
+int error_handling_2(int count_O, int count_P, int count_X);
+int respawn_o(GAME_T *ALL);
 #endif /* FUNC_H_ */

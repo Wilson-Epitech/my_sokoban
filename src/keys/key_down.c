@@ -17,7 +17,8 @@ if ((ALL->array.array[pos->x + 1][pos->y] == ' ')
     return;
 }
 if (ALL->array.array[pos->x + 1][pos->y] == 'X'
-&& ALL->array.array[pos->x + 2][pos->y] != '#') {
+&& ALL->array.array[pos->x + 2][pos->y] != '#'
+&& ALL->array.array[pos->x + 2][pos->y] != 'X') {
     ALL->array.array[pos->x][pos->y] = ' ';
     ALL->array.array[pos->x + 1][pos->y] = 'P';
     ALL->array.array[pos->x + 2][pos->y] = 'X';

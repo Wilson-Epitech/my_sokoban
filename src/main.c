@@ -13,6 +13,7 @@ int find_p_position(GAME_T *ALL, int r, int s)
             ALL->player_pos_values.x = r;
             ALL->player_pos_values.y = s;
     }
+    return 0;
 }
 
 int browse_array(GAME_T *ALL)
@@ -31,13 +32,13 @@ int main(int ac, char **av)
     init(&ALL, ac, av);
     char c = 0;
     int ch;
-
-    error_handling(ac, av);
+    error_loop(&ALL);
     initscr();
     noecho();
     browse_array(&ALL);
     while (c != 32) {
         keys(&ALL, ch);
+        respawn_o(&ALL);
         for (int x = 0; ALL.array.array[x] != NULL; x++) {
             mvprintw(x, 0, "%s\n", ALL.array.array[x]);
         }
