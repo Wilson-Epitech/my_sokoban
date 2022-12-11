@@ -26,12 +26,26 @@ int browse_array(GAME_T *ALL)
     return 0;
 }
 
+int flag_h(int ac, char **av)
+{
+    const char *flag_h_info = "USAGE\n" "      ./my_sokoban map"
+    "\nDESCRIPTION\n"
+    "      map file representing the warehouse map, containing ‘#’ for walls,"
+    "‘P’ for the player, ‘X’ for boxes and ‘O’ for storage locations.\n";
+
+    if (ac == 2 && ( av[1][0] == '-' || av[1][1] == 'h')) {
+        my_putstr(flag_h_info);
+        exit(0);
+    }
+    return 0;
+}
+
 int main(int ac, char **av)
 {
+    flag_h(ac, av);
     GAME_T ALL;
     init(&ALL, ac, av);
-    char c = 0;
-    int ch;
+    char c = 0; int ch;
     error_loop(&ALL);
     initscr();
     noecho();
