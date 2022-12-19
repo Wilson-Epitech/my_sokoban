@@ -33,7 +33,7 @@ int flag_h(int ac, char **av)
     "      map file representing the warehouse map, containing ‘#’ for walls,"
     "‘P’ for the player, ‘X’ for boxes and ‘O’ for storage locations.\n";
 
-    if (ac == 2 && ( av[1][0] == '-' || av[1][1] == 'h')) {
+    if (ac == 2 && ( av[1][0] == '-' && av[1][1] == 'h')) {
         my_putstr(flag_h_info);
         exit(0);
     }
