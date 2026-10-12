@@ -14,7 +14,7 @@
 
 <p align="center"><img src=".github/assets/my_sokoban.gif" alt="my_sokoban" width="820"/></p>
 
-## En deux mots
+## Le projet en quelques mots
 
 Pousser toutes les caisses (`X`) sur leurs emplacements (`O`), au clavier, avec ncurses. Les niveaux sont de simples fichiers texte.
 
@@ -24,10 +24,6 @@ Pousser toutes les caisses (`X`) sur leurs emplacements (`O`), au clavier, avec 
 - Déplacements aux flèches, poussée de caisses, collisions avec les murs
 - Détection de la victoire
 - Niveaux d'exemple dans [`examples/`](examples)
-
-## Sous le capot
-
-La carte est chargée dans un tableau de chaînes. À chaque touche, on calcule la case visée : si c'est une caisse, on vérifie que la case suivante est libre avant de pousser. 
 
 ## Lancer le projet
 
